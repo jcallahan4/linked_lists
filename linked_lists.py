@@ -1,4 +1,3 @@
-# linked_lists.py
 """
 Linked Lists
 Jake Callahan
