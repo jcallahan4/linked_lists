@@ -1,5 +1,6 @@
 # linked_lists.py
-"""Volume 2: Linked Lists.
+"""
+Linked Lists
 Jake Callahan
 2018/09/27
 
