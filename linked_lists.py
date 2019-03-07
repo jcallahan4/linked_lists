@@ -1,12 +1,11 @@
 # linked_lists.py
 """Volume 2: Linked Lists.
 Jake Callahan
-Section 002
 2018/09/27
+
+Basic demonstration of linked list data structures
 """
 
-
-# Problem 1
 class Node:
     """A basic node class for storing data."""
     def __init__(self, data):
@@ -29,7 +28,6 @@ class LinkedListNode(Node):
         self.prev = None                # Reference to the previous node.
 
 
-# Problems 2-5
 class LinkedList:
     """Doubly linked list data structure class.
 
@@ -63,7 +61,6 @@ class LinkedList:
             self.tail = new_node
         self.size += 1                              # Update size of linked list
 
-    # Problem 2
     def find(self, data):
         """Return the first node in the list containing the data.
 
@@ -100,7 +97,6 @@ class LinkedList:
         if node_found is False:                     # Raise error if data does not exist
             raise ValueError("Data not found!")
 
-    # Problem 2
     def get(self, i):
         """Return the i-th node in the list.
 
@@ -131,7 +127,6 @@ class LinkedList:
             n += 1                                  # Update index
         return current_node                         # Return desired node
 
-    # Problem 3
     def __len__(self):
         """Return the number of nodes in the list.
 
@@ -186,7 +181,6 @@ class LinkedList:
 
             return ostring
 
-    # Problem 4
     def remove(self, data):
         """Remove the first node in the list containing the data.
 
@@ -207,7 +201,6 @@ class LinkedList:
 
         delete_node.next.prev, delete_node.prev.next = delete_node.prev, delete_node.next   # Link prev node and next node
 
-    # Problem 5
     def insert(self, index, data):
         """Insert a node containing data into the list immediately before the
         node at the index-th location.
@@ -252,7 +245,6 @@ class LinkedList:
 
         self.size +=1
 
-# Problem 6: Deque class.
 class Deque(LinkedList):
     """Doubly linked list data structure class inherited from LinkedList, only
     allows additions or removals at either end of the list.
@@ -326,9 +318,7 @@ class Deque(LinkedList):
         """Overwrites LinkedList.insert() and prevents it from being used."""
         raise NotImplementedError("Use append() or appendleft() to add data")
 
-
-# Problem 7
-def prob7(infile, outfile):
+def reverse_file(infile, outfile):
     """Reverse the contents of a file by line and write the results to
     another file.
 
@@ -346,7 +336,6 @@ def prob7(infile, outfile):
 
     with open(outfile, 'w') as outfile:             # Open file to write
         ostring = ""
-        #import pdb; pdb.set_trace()
         for n in range(len(incontents)):
             writeline = incontents.pop()
             if n == 0:
